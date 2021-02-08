@@ -14,10 +14,10 @@ func helloServer(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	log.Printf("Starting web server on 8081")
+	log.Printf("Starting web server on 8180")
 	handler := http.HandlerFunc(helloServer)
-	err := http.ListenAndServe(":8081", handler)
+	err := http.ListenAndServe(":8180", handler)
 	if err != nil {
-		log.Fatal("Could not listen on port: 8081", err)
+		log.Fatal("Could not listen on port: 8180", err)
 	}
 }

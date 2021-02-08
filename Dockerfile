@@ -8,5 +8,5 @@ FROM alpine:latest
 WORKDIR /app
 COPY --from=build /app/go-server /app/go-server
 
-EXPOSE 8081
-ENTRYPOINT [".go-server"]
+EXPOSE 8180
+ENTRYPOINT ["/app/go-server"]
