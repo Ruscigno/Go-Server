@@ -9,7 +9,10 @@ import (
 )
 
 func helloServer(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "Hey, here is your request: %s", req.URL.Path)
+	fmt.Fprintf(w, "<html><body>")
+	fmt.Fprintf(w, "<p>Hey, here is your request: %s</p>", req.URL.Path)
+	fmt.Fprintf(w, "<p>Version 1.0.2</p>")
+	fmt.Fprintf(w, "</body></html>")
 	log.Printf("Received request for path: %s", req.URL.Path)
 }
 
